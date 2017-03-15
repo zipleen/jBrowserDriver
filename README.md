@@ -13,10 +13,10 @@ Or install via Maven:
 <dependency>
   <groupId>com.machinepublishers</groupId>
   <artifactId>jbrowserdriver</artifactId>
-  <version>0.17.3</version>
+  <version>0.17.5</version>
 </dependency>
 ```
-For other install options, see the [Central Repository](http://search.maven.org/#artifactdetails|com.machinepublishers|jbrowserdriver|0.17.3|jar).
+For other install options, see the [Central Repository](http://search.maven.org/#artifactdetails|com.machinepublishers|jbrowserdriver|0.17.5|jar).
 
 ## Prerequisites
 Java 8 with JavaFX:
@@ -122,4 +122,4 @@ Feel free to discuss bugs and new features by opening a [new issue](https://gith
 
 - - -
 
-Copyright (C) 2014-2016 [Machine Publishers, LLC](https://machinepublishers.com) and the jBrowserDriver contributors
+Copyright (C) 2014-2017 [Machine Publishers, LLC](https://machinepublishers.com) and the jBrowserDriver contributors

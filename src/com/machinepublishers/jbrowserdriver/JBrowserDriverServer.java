@@ -1,6 +1,6 @@
 /* 
  * jBrowserDriver (TM)
- * Copyright (C) 2014-2016 Machine Publishers, LLC and the jBrowserDriver contributors
+ * Copyright (C) 2014-2017 Machine Publishers, LLC and the jBrowserDriver contributors
  * https://github.com/MachinePublishers/jBrowserDriver
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -115,6 +115,7 @@ class JBrowserDriverServer extends RemoteObject implements JBrowserDriverRemote,
         }
       }
       registry = registryTmp;
+      registry.rebind("HeartbeatRemote", new HeartbeatServer());
       registry.rebind("JBrowserDriverRemote", new JBrowserDriverServer());
 
       RMISocketFactory.setSocketFactory(socketFactory.get());
@@ -213,12 +214,16 @@ class JBrowserDriverServer extends RemoteObject implements JBrowserDriverRemote,
         return outerHtml;
       }
     }
-    WebPage page = Accessor.getPageFor(context.get().item().engine.get());
-    String html = page.getHtml(page.getMainFrame());
-    if (html != null && !html.isEmpty()) {
-      return html;
-    }
-    return page.getInnerText(page.getMainFrame());
+    return AppThread.exec(context.get().item().statusCode, new Sync<String>() {
+      public String perform() {
+        WebPage page = Accessor.getPageFor(context.get().item().engine.get());
+        String html = page.getHtml(page.getMainFrame());
+        if (html != null && !html.isEmpty()) {
+          return html;
+        }
+        return page.getInnerText(page.getMainFrame());
+      }
+    });
   }
 
   /**

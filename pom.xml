@@ -5,7 +5,7 @@
   <artifactId>jbrowserdriver</artifactId>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>A programmable, embeddable web browser driver compatible with the Selenium WebDriver spec -- headless, WebKit-based, pure Java</description>
-  <version>0.17.4-SNAPSHOT</version>
+  <version>0.17.6-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>https://github.com/machinepublishers/jbrowserdriver</url>
   <scm>
@@ -151,7 +151,7 @@
     <dependency>
       <groupId>io.github.lukehutch</groupId>
       <artifactId>fast-classpath-scanner</artifactId>
-      <version>1.93.0</version>
+      <version>2.0.16</version>
     </dependency>
   </dependencies>
   <distributionManagement>
@@ -236,7 +236,7 @@
             com.machinepublishers.jbrowserdriver.diagnostics;com.machinepublishers.glass.ui.monocle;com.sun.glass.ui.accessible;com.sun.glass.ui.monocle;com.thoughtworks.selenium;org.apache.commons.logging;org.apache.http.impl.client.cache;org.apache.http.impl.cookie;org.openqa.selenium.html5;org.openqa.selenium.interactions.internal;org.openqa.selenium.interactions.touch;org.openqa.selenium.logging.profiler;org.openqa.selenium.remote;org.openqa.selenium.remote.server;org.openqa.selenium.security
           </excludePackageNames>
           <bottom>
-            <![CDATA[Copyright &copy; 2014-2016 Machine Publishers, LLC and the jBrowserDriver contributors.<br>Project homepage: <a target="_blank" href="https://github.com/machinepublishers/jbrowserdriver">https://github.com/machinepublishers/jbrowserdriver<a>]]>
+            <![CDATA[Copyright &copy; 2014-2017 Machine Publishers, LLC and the jBrowserDriver contributors.<br>Project homepage: <a target="_blank" href="https://github.com/machinepublishers/jbrowserdriver">https://github.com/machinepublishers/jbrowserdriver<a>]]>
           </bottom>
         </configuration>
         <executions>
